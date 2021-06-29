@@ -2,26 +2,12 @@ body {
   padding: 0px;
 }
 
-/* .jumbotron {
-  background-image: url("image1new.png");
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
-  height: 300px;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("image1new.png");
-
-} */
-
 #hero-image {
-  background-image: url("dog1.jpg");
+  background-image: url("dog3.png");
   height: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   transform: translate3d(0px, 0px, 0px);
   height: 500px;
-}
-
-button {
-  background-color: 90b2a9;
 }
