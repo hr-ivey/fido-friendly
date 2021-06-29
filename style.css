@@ -11,3 +11,8 @@ body {
   transform: translate3d(0px, 0px, 0px);
   height: 500px;
 }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

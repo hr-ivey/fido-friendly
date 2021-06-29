@@ -6,19 +6,20 @@ function getMovie(searchTerm) {
 };
 
 function loadMovieDetails(data) {
-    $("#plot").empty().append(data.Plot);
+    $("#synopsis").empty().append(data.Plot);
     $("#rated").empty().append(data.Rated);
-    $("#ratings").empty().append(data.imdbRating);
-    $("#poster img").attr("src", data.Poster);
+    $("#rating").empty().append(data.imdbRating);
+    $("#poster").attr("src", data.Poster);
 }
 
 
-$("#searchForm").on("submit", async function(e) {
+$("#searchBtn").on("click", async function(e) {
     e.preventDefault();
 
-    var searchTerm = $("#searchBox").empty().val();
+    var searchTerm = $("#searchBox").val();
     var movie = await getMovie(searchTerm);
 
     loadMovieDetails(movie);
-    console.log(movie);
+
+    $("#searchResults").removeClass("hidden");
 });
