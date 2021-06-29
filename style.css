@@ -1,0 +1,13 @@
+body {
+  padding: 0px;
+}
+
+#hero-image {
+  background-image: url("dog1.png");
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  transform: translate3d(0px, 0px, 0px);
+  height: 500px;
+}
