@@ -1,4 +1,11 @@
+body {
+    padding: 0px;
+}
+
 .jumbotron {
-  background-image: url("image1.jpg");
+  background-image: url("image1new.png");
   background-size: cover;
+  background-position: center center;
+  text-align: center;
+  height: 300px;
 }
