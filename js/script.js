@@ -1,6 +1,7 @@
 var apiKey = "2bc1604f";
 var hostUrl = 'https://enigmatic-citadel-24557.herokuapp.com/';
 var dddUrl = 'https://www.doesthedogdie.com/dddsearch?q=';
+var dropEl = document.getElementById("dropdown");
 var movieArray = [];
 
 function getMovie(searchTerm) {
@@ -39,10 +40,27 @@ $("#searchBtn").on("click", async function(e) {
 function storeMovie (movie) {
     movieArray.push(movie);
     localStorage.setItem("search-history", JSON.stringify(movieArray));
+    checkArray();
 }
 
+function checkArray(){
+    var storedMovies = localStorage.getItem("search-history");
+    if (storedMovies) {
+        movieArray = JSON.parse(storedMovies);
+    }
+    renderSearchList();
+}
 
+function renderSearchList() {
+    dropEl.innerHTML = "";
 
+    for (var i = movieArray.length - 1; i >= 0; i--) {
+        var liEl = document.createElement('li');
+        liEl.classList.add('dropdown-item');
+        liEl.textContent = movieArray[i];
+        dropEl.append(liEl);
+    }
+}
 
 
 function fetchMovie(titleEncoded){
@@ -98,7 +116,5 @@ function doesDog(data) {
         console.log("Your pupper is safe! Watch freely.");
     };
 }
-    
-// console.log(encodeURI("old yeller"));
-    
-// fetchMovie();
+
+checkArray();
