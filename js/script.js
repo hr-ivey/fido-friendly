@@ -40,8 +40,10 @@ $("#searchBtn").on("click", async function(e) {
 
 
 function storeMovie (movie) {
-    movieArray.push(movie);
-    localStorage.setItem("search-history", JSON.stringify(movieArray));
+    if (!movieArray.includes(movie)) {
+        movieArray.push(movie);
+        localStorage.setItem("search-history", JSON.stringify(movieArray));
+    }
     checkArray();
 }
 
