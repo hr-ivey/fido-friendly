@@ -1,6 +1,7 @@
 var apiKey = "2bc1604f";
 var hostUrl = 'https://enigmatic-citadel-24557.herokuapp.com/';
 var dddUrl = 'https://www.doesthedogdie.com/dddsearch?q=';
+var movieArray = [];
 
 function getMovie(searchTerm) {
     return fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
@@ -29,12 +30,16 @@ $("#searchBtn").on("click", async function(e) {
 
     loadMovieDetails(movie);
     fetchMovie(fidoSearch);
+    storeMovie(searchTerm);
 
     $("#searchResults").removeClass("hidden");
 });
 
 
-
+function storeMovie (movie) {
+    movieArray.push(movie);
+    localStorage.setItem("search-history", JSON.stringify(movieArray));
+}
 
 
 
