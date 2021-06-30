@@ -2,6 +2,8 @@ var apiKey = "2bc1604f";
 var hostUrl = 'https://enigmatic-citadel-24557.herokuapp.com/';
 var dddUrl = 'https://www.doesthedogdie.com/dddsearch?q=';
 var dropEl = document.getElementById("dropdown");
+var dogAnsEl = document.getElementById("dog-answer");
+var dogIconEl = document.getElementById("dog-icon");
 var movieArray = [];
 
 function getMovie(searchTerm) {
@@ -106,14 +108,25 @@ function fetchDog(id) {
 function doesDog(data) {
     var yes = data.topicItemStats[0].yesSum;
     var no = data.topicItemStats[0].noSum
+    var iconEl = 
     console.log(yes, no);
 
+    dogAnsEl.setAttribute("class", "");
+    dogIconEl.setAttribute("class", "");
+
     if (yes == no) {
-        console.log("Our all-knowing eye is on the fritz. We aren't sure about this one.");
+        dogAnsEl.classList.add("dog-unknown");
+        dogAnsEl.innerHTML = "Our all-knowing eye is on the fritz. We aren't sure about this one. "; 
+        dogIconEl.classList.add("fas", "fa-question-circle", "dog-unknown");
     } else if (yes > no) {
-        console.log("Unfortunately, Fido doesn't make it. Better avoid this one.");
+        dogAnsEl.classList.add("dog-unsafe");
+        dogAnsEl.innerHTML = "Unfortunately, Fido doesn't make it. Better avoid this one. ";
+        dogIconEl.classList.add("fas", "fa-sad-tear", "dog-unsafe");
     } else {
-        console.log("Your pupper is safe! Watch freely.");
+        dogAnsEl.classList.add("dog-safe");
+        dogAnsEl.innerHTML = "Your pupper is safe! Watch freely. ";
+        dogIconEl.classList.add("fas", "fa-dog", "dog-safe");
+
     };
 }
 
