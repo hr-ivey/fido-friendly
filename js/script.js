@@ -2,6 +2,7 @@ var apiKey = "2bc1604f";
 var hostUrl = 'https://enigmatic-citadel-24557.herokuapp.com/';
 var dddUrl = 'https://www.doesthedogdie.com/dddsearch?q=';
 var movieArray = [];
+var dropEl = document.getElementById("dropdown-container");
 
 function getMovie(searchTerm) {
     return fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
@@ -36,12 +37,46 @@ $("#searchBtn").on("click", async function(e) {
 });
 
 
+// $("#dropDownBtn").on("click", async function(e) {
+//     e.preventDefault();
+
+//     var storedTerm = $("#searchBox").val();
+//     var movie = await getMovie(storedTerm);
+//     var fidoSearch = encodeURI(storedTerm);
+
+//     loadMovieDetails(movie);
+//     fetchMovie(fidoSearch);
+//     storeMovie(searchTerm);
+
+//     $("#searchResults").removeClass("hidden");
+// });
+
+
 function storeMovie (movie) {
     movieArray.push(movie);
     localStorage.setItem("search-history", JSON.stringify(movieArray));
+    movieHistory();
+}
+
+function movieHistory() {
+    var searchHistory = localStorage.getItem("search-history");
+    if (searchHistory) {
+        movieArray = JSON.parse(searchHistory);
+    }
+    renderStorage();
 }
 
 
+function renderStorage() {
+    dropEl.innerHTML = "";
+
+    for (var i = movieArray.length - 1; i >= 0; i--) {
+        var liEl = document.createElement('li');
+        liEl.classList.add('dropdown-item');
+        liEl.textContent = movieArray[i];
+        dropEl.append(liEl)
+    }
+}
 
 
 
@@ -98,7 +133,6 @@ function doesDog(data) {
         console.log("Your pupper is safe! Watch freely.");
     };
 }
-    
-// console.log(encodeURI("old yeller"));
-    
-// fetchMovie();
+
+movieHistory();
+
