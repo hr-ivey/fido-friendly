@@ -10,6 +10,8 @@ body {
   background-position: center top;
   transform: translate3d(0px, 0px, 0px);
   height: 500px;
+  display: flex;
+  align-items: center;
 }
 
 #footer-image {
