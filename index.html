@@ -13,7 +13,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap&amp;_cacheOverride=1624993645711" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap&amp;_cacheOverride=1624993645711"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -29,13 +31,25 @@
             <li class="nav-item navbar-nav ms-auto">
                 <a class="text-white btn btn-dark" href="https://www.pumpkin.care/blog/12-best-dog-movies-of-all-time/">
                     <i class="fas fa-paw"></i>
-                    Movie Suggestions</a>
+                     Movie Suggestions</a>
             </li>
-            <li>
-                <a class="text-white btn btn-dark" href="#footer">
-                    <i class="fas fa-users"></i> Contact Us</a>
-            </li>
-        </div>
+            <div class="dropdown">
+                <button class="btn text-white btn btn-dark
+                " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-chevron-circle-down"></i>  Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div>
+                <li>
+                    <a class="text-white btn btn-dark" href="#footer">
+                        <i class="fas fa-users"></i>  Contact Us</a>
+                </li>
+            </div>
     </nav>
 </header>
 
@@ -48,10 +62,10 @@
             <!-- Search input. -->
             <div class="form-outline">
                 <input type="search" class="form-control" placeholder="Search by movie title" aria-label="Search"
-                    aria-describedby="search-addon" id="searchBox"/>
+                    aria-describedby="search-addon" id="searchBox" />
                 <!-- Search button. -->
-                <button type="button"
-                    class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary" id="searchBtn">...but is it safe for
+                <button type="button" class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary"
+                    id="searchBtn">...but is it safe for
                     my dog to watch?</button>
             </div>
         </div>
@@ -67,61 +81,60 @@
             <img id="poster" src="#" alt="Movie poster.">
             <p><b>Release date:</b> <span id="releaseDate"></span></p>
             <p><b>Rated:</b> <span id="rated"></span></p>
-            <p><b>Genre:</b>  <span id="genre"></span></p>
+            <p><b>Genre:</b> <span id="genre"></span></p>
             <p><b>Rating:</b> <span id="rating"></span></p>
             <p><b>Runtime:</b> <span id="runtime"></span></p>
         </div>
     </div>
 </main>
 
-    <!-- Footer. -->
-    <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-facebook-f"></i></a>
-
-                <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-twitter"></i></a>
-
-                <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-google"></i></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-instagram"></i></a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-linkedin-in"></i></a>
-
-                <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-github"></i></a>
-            </section>
-            <!-- Section: Social media -->
-        </div>
-
-
-        <!-- Grid container -->
-
-        <!-- Section: Text -->
+<!-- Footer. -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
         <section class="mb-4">
-            <img id="footer-image" src="dog2.png" class="rounded" alt="An image of a dog.">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-linkedin-in"></i></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
         </section>
-        <!-- Copyright -->
-        <div class="text-center p-3 text-muted mt-auto" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 Copyright: The Fido Team
-            <a class="text-white" href="https://mdbootstrap.com/"></a>
-        </div>
-    </footer>
-    <!-- Footer -->
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <!-- Section: Social media -->
+    </div>
+
+
+    <!-- Grid container -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+        <img id="footer-image" src="dog2.png" class="rounded" alt="An image of a dog.">
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3 text-muted mt-auto" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright: The Fido Team
+        <a class="text-white" href="https://mdbootstrap.com/"></a>
+    </div>
+</footer>
+<!-- Footer -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>
 </body>
+
 </html>
