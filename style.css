@@ -10,4 +10,14 @@ body {
   background-position: center top;
   transform: translate3d(0px, 0px, 0px);
   height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+#footer-image {
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 200px; 
 }

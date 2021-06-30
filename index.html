@@ -9,20 +9,37 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<header class="site-header py-1 px-1 bg-dark text-white">
-
-    <!-- Company name and logo. -->
-    <h3>Fido Friendly</h3>
-
-    <!-- Tagline. -->
-    <p>Never traumatize your furry friend again</p>
+<header>
+    <nav class="navbar bg-dark fixed-top">
+        <div class="container-fluid">
+            <li>
+                <a class="text-white" href="#">
+                    <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    <!-- Never Traumatize Your Furry Friend Again! -->
+                </a>
+            </li>
+            <li class="nav-item navbar-nav ms-auto">
+                <a class="text-white btn btn-dark" href="https://www.pumpkin.care/blog/12-best-dog-movies-of-all-time/">
+                    <i class="fas fa-paw"></i>
+                    Movie Suggestions</a>
+            </li>
+            <li>
+                <a class="text-white btn btn-dark" href="#footer">
+                    <i class="fas fa-users"></i> Contact Us</a>
+            </li>
+        </div>
+    </nav>
 </header>
 
 <main>
     <!-- Hero content begins here. -->
-    <div id="hero-image" class="position-relative overflow-hidden text-center">
+    <div id="hero-image"
+        class="position-relative overflow-hidden text-center hover-overlay hover-zoom hover-shadow ripple rounded">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="text-white">I want to watch a movie...</h1>
             <!-- Search input. -->
@@ -67,17 +84,55 @@
         </div>
     </div>
 
-</main>
+    <!-- </main> -->
 
-<!-- Footer. -->
-<footer class="container">
-    <div class="row">
-        <div class="col-12 col-md text-center">
-            Fake social media icons? Terms of service. Made with ❤️ etc. <i>Disclaimer: Your dog doesn't actually know
-                what a movie is.</i>
+    <!-- Footer. -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
         </div>
-    </div>
-</footer>
+        <!-- Grid container -->
+
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+            <img id="footer-image" src="dog2.png" class="rounded" alt="An image of a dog.">
+        </section>
+        <!-- Copyright -->
+        <div class="text-center p-3 text-muted mt-auto" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright: The Fido Team
+            <a class="text-white" href="https://mdbootstrap.com/"></a>
+        </div>
+    </footer>
+    <!-- Footer -->
+</main>
 <script src="./js/script.js"></script>
 </body>
 
