@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap&amp;_cacheOverride=1624993645711"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <header>
@@ -25,19 +25,16 @@
             <li>
                 <a class="text-white" href="#">
                     <img src="ff-logo.png" alt="Fido Friendly logo" class="d-inline-block align-text-top" width="450">
-                    <!-- Never Traumatize Your Furry Friend Again! -->
                 </a>
             </li>
             <ul>
-                <li>
-                    <form class="d-flex">
-                        <input class="form-control me-1" type="search" placeholder="Search by Movie Title"
-                            aria-describedby="search-addon" id="searchBox" aria-label="Search">
-                        <button class="btn text-white btn btn-dark" id="searchBtn" type="submit"><i
-                                class="fas fa-search"></i></button>
-                    </form>
-                </li>
+                <li></li>
+                <div class="search-box">
+                    <button class="btn-search" id="searchBtn"><i class="fas fa-search"></i></button>
+                    <input type="text" aria-described by="search-addon" id="searchBox" class="input-search" placeholder="Search by Movie Title">
+                </div>
             </ul>
+
             <li class="nav-item navbar-nav ms-auto">
                 <a class="text-white btn btn-dark" href="https://www.pumpkin.care/blog/12-best-dog-movies-of-all-time/">
                     <i class="fas fa-paw"></i>
@@ -46,10 +43,10 @@
             <div class="dropdown">
                 <button class="btn text-white btn btn-dark
                 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-chevron-circle-down"></i>  Search History
+                    <i class="fas fa-chevron-circle-down"></i> Search History
                 </button>
                 <ul id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                   
+
                 </ul>
             </div>
             <div>
@@ -78,31 +75,53 @@
     <!-- </div>
         </div>
     </div> -->
-    <section>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
+    <container>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="scoob.jpeg" alt="Chania">
+            <div class="carousel-caption">
+              <h3>Los Angeles</h3>
+              <p>LA is always so much fun!</p>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+          </div>
+      
+          <div class="item">
+            <img src="pets.jpeg" alt="Chicago">
+            <div class="carousel-caption">
+              <h3>Chicago</h3>
+              <p>Thank you, Chicago!</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="petsUnited.jpeg" alt="New York">
+            <div class="carousel-caption">
+              <h3>New York</h3>
+              <p>We love the Big Apple!</p>
+            </div>
+          </div>
         </div>
-    </section>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </container>
 
     <!-- Search results. -->
     <div id="searchResults" class="col-12 col-md bg-dark px-3 pt-2 pb-4 hidden">
@@ -119,7 +138,7 @@
             <p><b>Runtime:</b> <span id="runtime"></span></p>
         </div>
     </div>
-</div>
+    </div>
 </main>
 
 <!-- Footer. -->
