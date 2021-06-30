@@ -37,6 +37,10 @@ body {
   border-style: solid;
 }
 
+#movieTitle {
+  font-weight: 900;
+}
+
 #poster {
   width: 200px;
   float: right;
