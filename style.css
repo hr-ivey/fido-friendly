@@ -19,6 +19,5 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    transform: translate3d(0px, 0px, 0px);
-    height: 170px; 
+    height: 155px; 
 }
