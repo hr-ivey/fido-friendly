@@ -69,3 +69,15 @@ body {
   display: none;
   visibility: hidden;
 }
+
+.dog-safe {
+  color: green;
+}
+
+.dog-unsafe {
+  color: darkred;
+}
+
+.dog-unknown {
+  color: blue;
+}
