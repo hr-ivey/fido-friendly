@@ -6,10 +6,15 @@ function getMovie(searchTerm) {
 };
 
 function loadMovieDetails(data) {
+    $("#movieTitle").empty().append(data.Title);
     $("#synopsis").empty().append(data.Plot);
     $("#rated").empty().append(data.Rated);
     $("#rating").empty().append(data.imdbRating);
     $("#poster").attr("src", data.Poster);
+    $("#releaseDate").empty().append(data.Released);
+    $("#genre").empty().append(data.Genre);
+    $("#runtime").empty().append(data.Runtime);
+    console.log(data);
 }
 
 
