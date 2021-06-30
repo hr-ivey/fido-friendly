@@ -45,31 +45,33 @@
             <!-- Search input. -->
             <div class="form-outline">
                 <input type="search" class="form-control" placeholder="Search by movie title" aria-label="Search"
-                    aria-describedby="search-addon" />
+                    aria-describedby="search-addon" id="searchBox"/>
                 <!-- Search button. -->
                 <button type="button"
-                    class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary">...but is it safe for
+                    class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary" id="searchBtn">...but is it safe for
                     my dog to watch?</button>
             </div>
         </div>
     </div>
     <div class="product-device d-none d-md-block"></div>
     <div class="product-device product-device-2  d-none d-md-block"></div>
-    </div>
 
     <!-- Search results. -->
-    <div class="col-12 col-md bg-dark px-3 pt-2 pb-4">
+    <div id="searchResults" class="col-12 col-md bg-dark px-3 pt-2 pb-4 hidden">
         <div class="my-3 mb-3 text-center">
-            <h2 class="text-white">Movie Title</h2>
-            <p class="text-white">Brief text synopsis.</p>
+            <h2 class="text-white" id="movieTitle">Movie Title</h2>
+            <p class="text-white" id="synopsis">Brief text synopsis.</p>
         </div>
         <div class="bg-light mx-auto py-5 px-5" style="width: 90%; height: 300px; border-radius: 20px 20px;">
-            <img src="#" alt="An image of a dog.">
-            <p>Release date:</p>
-            <p>Genre:</p>
-            <p>Rating:</p>
+            <img id="poster" src="#" alt="An image of a dog.">
+            <p>Release date: <span id="releaseDate"></span></p>
+            <p>Rated: <span id="rated"></span></p>
+            <p>Genre:  <span id="genre"></span></p>
+            <p>Rating: <span id="rating"></span></p>
+            <p>Runtime: <span id="runtime"></span></p>
         </div>
     </div>
+</main>
 
     <div class="col-12 col-md bg-dark px-3 pt-2 pb-4">
         <div class="my-3 mb-3 text-center">
@@ -118,8 +120,9 @@
             </section>
             <!-- Section: Social media -->
         </div>
-        <!-- Grid container -->
 
+
+        <!-- Grid container -->
 
         <!-- Section: Text -->
         <section class="mb-4">
@@ -133,7 +136,7 @@
     </footer>
     <!-- Footer -->
 </main>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>
 </body>
-
 </html>

@@ -21,3 +21,8 @@ body {
     background-position: center top;
     height: 200px; 
 }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
