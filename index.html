@@ -20,7 +20,7 @@
 </head>
 
 <header>
-    <nav class="navbar bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
             <li>
                 <a class="text-white" href="#">
@@ -28,20 +28,24 @@
                 </a>
             </li>
             <ul>
-            <form class="d-flex">
-                <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+                <li>
+                    <form class="d-flex">
+                        <input class="form-control me-1" type="search" placeholder="Search by Movie Title"
+                            aria-describedby="search-addon" id="searchBox" aria-label="Search">
+                        <button class="btn text-white btn btn-dark" id="searchBtn" type="submit"><i
+                                class="fas fa-search"></i></button>
+                    </form>
+                </li>
             </ul>
             <li class="nav-item navbar-nav ms-auto">
                 <a class="text-white btn btn-dark" href="https://www.pumpkin.care/blog/12-best-dog-movies-of-all-time/">
                     <i class="fas fa-paw"></i>
-                     Movie Suggestions</a>
+                    Movie Suggestions</a>
             </li>
             <div class="dropdown">
                 <button class="btn text-white btn btn-dark
                 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-chevron-circle-down"></i>  Dropdown button
+                    <i class="fas fa-chevron-circle-down"></i> Dropdown button
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -52,7 +56,7 @@
             <div>
                 <li>
                     <a class="text-white btn btn-dark" href="#footer">
-                        <i class="fas fa-users"></i>  Contact Us</a>
+                        <i class="fas fa-users"></i> Contact Us</a>
                 </li>
             </div>
     </nav>
@@ -60,43 +64,46 @@
 
 <main>
     <!-- Hero content begins here. -->
-    <div id="hero-image"
+    <!-- <div id="hero-image"
         class="position-relative overflow-hidden text-center hover-overlay hover-zoom hover-shadow ripple rounded">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="text-white">I want to watch a movie...</h1>
-            <!-- Search input. -->
-            <div class="form-outline">
+            <h1 class="text-white">I want to watch a movie...</h1> -->
+    <!-- Search input. -->
+    <!-- <div class="form-outline">
                 <input type="search" class="form-control" placeholder="Search by movie title" aria-label="Search"
-                    aria-describedby="search-addon" id="searchBox" />
-                <!-- Search button. -->
-                <button type="button" class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary"
+                    aria-describedby="search-addon" id="searchBox" /> -->
+    <!-- Search button. -->
+    <!-- <button type="button" class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary"
                     id="searchBtn">...but is it safe for
-                    my dog to watch?</button>
+                    my dog to watch?</button> -->
+    <!-- </div>
+        </div>
+    </div> -->
+    <section>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </div>
-
-    <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div> -->
+    </section>
 
     <!-- Search results. -->
     <div id="searchResults" class="col-12 col-md bg-dark px-3 pt-2 pb-4 hidden">
