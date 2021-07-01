@@ -16,11 +16,11 @@ body {
   padding: 0px;
   font-family: "Rubik", sans-serif;
   background-color: #212529;
-  background-image: url("./img/bg.png");
+  background-image: url("../img/bg.png");
 }
 
 #searchResults {
-  background-image: url("./img/bg.png");
+  background-image: url("../img/bg.png");
   border-bottom: 4px;
   border-bottom-color: #fff;
   border-style: solid;
