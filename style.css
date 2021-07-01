@@ -36,7 +36,7 @@ body {
   border: 0.5em;
   border-style: solid;
   border-color: #212529;
-  -webkit-box-shadow: 10px 10px 0px 4px #e91941; 
+  -webkit-box-shadow: 10px 10px 0px 4px #e91941;
   box-shadow: 10px 10px 0px 4px #e91941;
   margin: 0em 0em 1em 1em;
 }
@@ -69,7 +69,7 @@ body {
   width: fit-content;
   height: fit-content;
   position: relative;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 .input-search {
   height: 50px;
@@ -144,19 +144,84 @@ body {
   height: 500px;
 }
 
-.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl
-{
+.bgimg {
+  background-image: url("/w3images/forestbridge.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+body,
+html {
+  height: 70%;
+  margin: 0;
+}
+
+.coming-soon-btn {
+  color: black;
+  size: 20px;
+}
+
+.container-form {
+  padding-top: 100px;
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
   justify-content: space-around;
 }
 
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  justify-content: space-around;
+}
 
 /* Mobile responsive layout changes. */
 @media only screen and (max-width: 1000px) {
-.navbar {
-  height: auto;
-}
-#logo {
-  width: 100%;
+  .navbar {
+    height: auto;
+  }
+  #logo {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -165,21 +230,41 @@ body {
     padding-bottom: 1em;
     margin: auto;
   }
-.navbar {
-  height: auto;
+  #logo {
+    width: 100%;
+  }
+  .navbar {
+    height: auto;
+  }
+  .input-search {
+    width: 700px;
+  }
+  .btn-search:focus ~ .input-search {
+    transition: none;
+    width: 100%;
+    background: #343a40;
+  }
+  .carousel-inner > .carousel-item > img {
+    height: 300px;
+    margin-top: 250px;
+  }
+  .navbar {
+    height: auto;
+  }
+  .input-search {
+    width: 700px;
+  }
+  .btn-search:focus ~ .input-search {
+    transition: none;
+    width: 100%;
+    background: #343a40;
+  }
+  .carousel-inner > .carousel-item > img {
+    height: 300px;
+    margin-top: 250px;
+  }
 }
-.input-search {
-  width: 700px;
-}
-.btn-search:focus ~ .input-search {
-  transition: none;
-  width: 100%;
-  background: #343a40;
-}
-.carousel-inner > .carousel-item > img {
-  height: 300px;
-  margin-top: 250px;
-}
+
 @media only screen and (max-width: 500px) {
   .input-search {
     width: 300px;
@@ -187,3 +272,5 @@ body {
   .carousel-inner > .carousel-item > img {
     height: 200px;
     margin-top: 240px;
+  }
+}
