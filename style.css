@@ -2,7 +2,9 @@ b {
   color: #e91941;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
 }
 
@@ -12,7 +14,7 @@ h1 {
 
 body {
   padding: 0px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: #212529;
   background-image: url("/bg.png");
 }
@@ -44,17 +46,17 @@ body {
 #poster {
   width: 200px;
   float: right;
-  border: .5em;
+  border: 0.5em;
   border-style: solid;
   border-color: #e91941;
 }
 
 #footer-image {
-    height: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    height: 200px; 
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 200px;
 }
 
 .navbar {
@@ -70,12 +72,12 @@ body {
   visibility: hidden;
 }
 
-.search-box{
+.search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
 }
-.input-search{
+.input-search {
   height: 50px;
   width: 50px;
   border-style: none;
@@ -84,18 +86,18 @@ body {
   letter-spacing: 2px;
   outline: none;
   border-radius: 25px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: #343a40;
   padding-right: 40px;
-  color:#fff;
+  color: #fff;
 }
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
 }
-.btn-search{
+.btn-search {
   width: 50px;
   height: 50px;
   border-style: none;
@@ -106,23 +108,23 @@ body {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:#ffffff ;
-  background-color:transparent;
-  pointer-events: painted;  
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
 }
-.btn-search:focus ~ .input-search{
+.btn-search:focus ~ .input-search {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-.input-search:focus{
+.input-search:focus {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
 .dog-safe {
@@ -135,4 +137,9 @@ body {
 
 .dog-unknown {
   color: blue;
+}
+
+.carousel-inner > .carousel-item > img {
+  width: 10px;
+  height: 500px;
 }
