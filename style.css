@@ -19,12 +19,13 @@ body {
   background-image: url("/bg.png");
 }
 
+#logo {
+  padding-top: 1em;
+}
 
 #searchResults {
   background-image: url("/bg.png");
-  border-bottom: 1px;
-  border-top: 1px;
-  border-top-color: #fff;
+  border-bottom: 4px;
   border-bottom-color: #fff;
   border-style: solid;
 }
@@ -38,7 +39,10 @@ body {
   float: right;
   border: 0.5em;
   border-style: solid;
-  border-color: #e91941;
+  border-color: #212529;
+  -webkit-box-shadow: 10px 10px 0px 4px #e91941;
+  box-shadow: 10px 10px 0px 4px #e91941;
+  margin: 0em 0em 1em 1em;
 }
 
 #footer-image {
@@ -51,6 +55,9 @@ body {
 
 .navbar {
   height: 85px;
+  border-bottom: 4px;
+  border-bottom-color: #fff;
+  border-style: solid;
 }
 
 .movie-details {
@@ -66,6 +73,7 @@ body {
   width: fit-content;
   height: fit-content;
   position: relative;
+  margin-top: 0.5em;
 }
 .input-search {
   height: 50px;
@@ -129,13 +137,19 @@ body {
   color: blue;
 }
 
+.carousel {
+  border-bottom: 4px;
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+}
+
 .carousel-inner > .carousel-item > img {
   width: 10px;
   height: 500px;
 }
 
 .bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
+  background-image: url("/w3images/forestbridge.jpg");
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -170,7 +184,8 @@ hr {
   width: 40%;
 }
 
-body, html {
+body,
+html {
   height: 70%;
   margin: 0;
 }
@@ -182,4 +197,49 @@ body, html {
 
 .container-form {
   padding-top: 100px;
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  justify-content: space-around;
+}
+
+/* Mobile responsive layout changes. */
+@media only screen and (max-width: 1280px) {
+  ul {
+    padding-left: 0;
+    padding-bottom: 1em;
+    margin: auto;
+  }
+  #logo {
+    width: 100%;
+  }
+  .navbar {
+    height: auto;
+  }
+  .input-search {
+    width: 700px;
+  }
+  .btn-search:focus ~ .input-search {
+    transition: none;
+    width: 100%;
+    background: #343a40;
+  }
+  .carousel-inner > .carousel-item > img {
+    height: 300px;
+    margin-top: 250px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .input-search {
+    width: 300px;
+  }
+  .carousel-inner > .carousel-item > img {
+    height: 200px;
+    margin-top: 250px;
+  }
 }
