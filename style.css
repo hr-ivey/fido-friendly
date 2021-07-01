@@ -19,10 +19,6 @@ body {
   background-image: url("/bg.png");
 }
 
-#logo {
-  padding-top: 1em;
-}
-
 #searchResults {
   background-image: url("/bg.png");
   border-bottom: 4px;
@@ -54,7 +50,7 @@ body {
 }
 
 .navbar {
-  height: 85px;
+  height: 890x;
   border-bottom: 4px;
   border-bottom-color: #fff;
   border-style: solid;
@@ -159,16 +155,20 @@ body {
 }
 
 /* Mobile responsive layout changes. */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
+.navbar {
+  height: auto;
+}
+#logo {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
   ul {
     padding-left: 0;
     padding-bottom: 1em;
     margin: auto;
   }
-}
-#logo {
-  width: 100%;
-}
 .navbar {
   height: auto;
 }
