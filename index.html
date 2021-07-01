@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,28 +21,33 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+<!-- Header -->
 <header>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
             <li>
+                <!-- Logo -->
                 <a class="text-white" href="#">
                     <img src="ff-logo.png" alt="Fido Friendly logo" class="d-inline-block align-text-top" width="450">
                 </a>
             </li>
             <ul>
                 <li></li>
+                <!-- Search Box -->
                 <div class="search-box">
                     <button class="btn-search" id="searchBtn"><i class="fas fa-search"></i></button>
                     <input type="text" aria-described by="search-addon" id="searchBox" class="input-search"
                         placeholder="Search by Movie Title">
                 </div>
             </ul>
-
+            <!-- Movie Suggestion Button -->
             <li class="nav-item navbar-nav ms-auto">
                 <a class="text-white btn btn-dark" href="https://www.pumpkin.care/blog/12-best-dog-movies-of-all-time/">
                     <i class="fas fa-paw"></i>
                     Movie Suggestions</a>
             </li>
+            <!-- Search History Dropdown -->
             <div class="dropdown">
                 <button class="btn text-white btn btn-dark
                 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,8 +58,9 @@
                 </ul>
             </div>
             <div>
+                <!-- Contact Us Button -->
                 <li>
-                    <a class="text-white btn btn-dark" href="#footer">
+                    <a class="text-white btn btn-dark" href="contact-us.html">
                         <i class="fas fa-users"></i> Contact Us</a>
                 </li>
             </div>
@@ -62,7 +69,9 @@
 
 <main>
     <container>
+        <!-- Carousel wrapper -->
         <div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <!-- Indicators -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -72,38 +81,47 @@
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
+            <!-- Inner -->
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
+                <div class="carousel-item active" data-bs-interval="5000">
                     <img src="img/bolt.png" class="d-block w-100" alt="bolt movie poster">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <!-- Single item -->
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="img/up.png" class="d-block w-100" alt="up movie poster">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <!-- Single item -->
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="img/101-dalmatians.png" class="d-block w-100" alt="101 dalmatians movie poster">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <!-- Single item -->
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="img/peabody.png" class="d-block w-100" alt="mr. peabody movie poster">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <!-- Single item -->
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="img/pets.png" class="d-block w-100" alt="pets movie poster">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <!-- Single item -->
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="img/superPets.png" class="d-block w-100" alt="super pets movie poster">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
             </div>
+            <!-- Inner -->
+
+            <!-- Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselDark" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -113,6 +131,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- Carousel wrapper -->
     </container>
 
     <!-- Search results. -->
@@ -141,26 +160,26 @@
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+            <a class="btn btn-outline-light btn-floating m-1" href="coming-soon.html" role="button"><i
                     class="fab fa-facebook-f"></i></a>
 
             <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/FidoMovie" role="button"><i class="fab fa-twitter"></i></a>
 
             <!-- Google -->
             <a class="btn btn-outline-light btn-floating m-1" href="mailto: friendfido@gmail.com" role="button"><i
                     class="fab fa-google"></i></a>
 
             <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+            <a class="btn btn-outline-light btn-floating m-1" href="coming-soon.html" role="button"><i
                     class="fab fa-instagram"></i></a>
 
             <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/fido-friend" role="button"><i
                     class="fab fa-linkedin-in"></i></a>
 
             <!-- Github -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/hr-ivey/fido-friendly" role="button"><i class="fab fa-github"></i></a>
         </section>
         <!-- Section: Social media -->
     </div>
