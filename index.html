@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fido Friendly - Is my movie safe for pups?</title>
+    <title>Fido Friendly</title>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -20,14 +21,22 @@
 </head>
 
 <header>
-    <nav class="navbar bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
             <li>
                 <a class="text-white" href="#">
                     <img src="ff-logo.png" alt="Fido Friendly logo" class="d-inline-block align-text-top" width="450">
-                    <!-- Never Traumatize Your Furry Friend Again! -->
                 </a>
             </li>
+            <ul>
+                <li></li>
+                <div class="search-box">
+                    <button class="btn-search" id="searchBtn"><i class="fas fa-search"></i></button>
+                    <input type="text" aria-described by="search-addon" id="searchBox" class="input-search"
+                        placeholder="Search by Movie Title">
+                </div>
+            </ul>
+
             <li class="nav-item navbar-nav ms-auto">
                 <a class="text-white btn btn-dark" href="https://www.pumpkin.care/blog/12-best-dog-movies-of-all-time/">
                     <i class="fas fa-paw"></i>
@@ -44,7 +53,7 @@
             </div>
             <div>
                 <li>
-                    <a class="text-white btn btn-dark" href="contact-us.html">
+                    <a class="text-white btn btn-dark" href="#footer">
                         <i class="fas fa-users"></i> Contact Us</a>
                 </li>
             </div>
@@ -52,22 +61,59 @@
 </header>
 
 <main>
-    <!-- Hero content begins here. -->
-    <div id="hero-image"
-        class="position-relative overflow-hidden text-center hover-overlay hover-zoom hover-shadow ripple rounded">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="text-white">I want to watch a movie...</h1>
-            <!-- Search input. -->
-            <div class="form-outline">
-                <input type="search" class="form-control" placeholder="Search by movie title" aria-label="Search"
-                    aria-describedby="search-addon" id="searchBox" />
-                <!-- Search button. -->
-                <button type="button" class="btn btn-outline-secondary text-white display-7 fw-normal bg-secondary"
-                    id="searchBtn">...but is it safe for
-                    my dog to watch?</button>
+    <container>
+        <div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="img/bolt.png" class="d-block w-100" alt="bolt movie poster">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/up.png" class="d-block w-100" alt="up movie poster">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/101-dalmatians.png" class="d-block w-100" alt="101 dalmatians movie poster">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/peabody.png" class="d-block w-100" alt="mr. peabody movie poster">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/pets.png" class="d-block w-100" alt="pets movie poster">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/superPets.png" class="d-block w-100" alt="super pets movie poster">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </div>
+    </container>
 
     <!-- Search results. -->
     <div id="searchResults" class="col-12 col-md bg-dark px-3 pt-2 pb-4 hidden">

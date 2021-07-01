@@ -29,7 +29,7 @@ function loadMovieDetails(movie, dog) {
 
     if (yes == no) {
         dogAnsEl.classList.add("dog-unknown");
-        dogAnsEl.innerHTML = "Our all-knowing eye is on the fritz. We aren't sure about this one. "; 
+        dogAnsEl.innerHTML = "Our all-knowing eye is on the fritz. We aren't sure about this one. ";
         dogIconEl.classList.add("fas", "fa-question-circle", "dog-unknown");
     } else if (yes > no) {
         dogAnsEl.classList.add("dog-unsafe");
@@ -42,7 +42,7 @@ function loadMovieDetails(movie, dog) {
     };
 }
 
-$("#searchBtn").on("click", async function(e) {
+$("#searchBtn").on("click", async function (e) {
     e.preventDefault();
 
     var searchTerm = $("#searchBox").val();
@@ -52,13 +52,13 @@ $("#searchBtn").on("click", async function(e) {
     var dog = await fetchDog(didDogDieMovie.items[0].id);
 
     loadMovieDetails(movie, dog);
-    
+
     storeMovie(searchTerm);
 
     $("#searchResults").removeClass("hidden");
 });
 
-function storeMovie (movie) {
+function storeMovie(movie) {
     if (!movieArray.includes(movie)) {
         movieArray.push(movie);
         localStorage.setItem("search-history", JSON.stringify(movieArray));
@@ -66,7 +66,7 @@ function storeMovie (movie) {
     checkArray();
 }
 
-function checkArray(){
+function checkArray() {
     var storedMovies = localStorage.getItem("search-history");
     if (storedMovies) {
         movieArray = JSON.parse(storedMovies);
@@ -85,26 +85,26 @@ function renderSearchList() {
     }
 }
 
-async function fetchMovie(titleEncoded){
+async function fetchMovie(titleEncoded) {
     return await fetch(hostUrl + dddUrl + encodeURI(titleEncoded), {
         headers: {
             Accept: 'application/json',
             'X-API-KEY': '62c08a52331c1b494657c5fada8c179c',
         },
     })
-    .then(res => res.json());
+        .then(res => res.json());
 }
-    
+
 async function fetchDog(id) {
     var mediaUrl = 'https://www.doesthedogdie.com/media/'
-    
+
     return fetch(hostUrl + mediaUrl + id, {
         headers: {
             Accept: 'application/json',
             'X-API-KEY': '62c08a52331c1b494657c5fada8c179c',
         },
     })
-    .then(res => res.json());
+        .then(res => res.json());
 }
 
 function doesDog(data) {
@@ -116,7 +116,7 @@ function doesDog(data) {
 
     if (yes == no) {
         dogAnsEl.classList.add("dog-unknown");
-        dogAnsEl.innerHTML = "Our all-knowing eye is on the fritz. We aren't sure about this one. "; 
+        dogAnsEl.innerHTML = "Our all-knowing eye is on the fritz. We aren't sure about this one. ";
         dogIconEl.classList.add("fas", "fa-question-circle", "dog-unknown");
     } else if (yes > no) {
         dogAnsEl.classList.add("dog-unsafe");
@@ -130,3 +130,19 @@ function doesDog(data) {
 }
 
 checkArray();
+
+$(".input-search").on('keyup', async function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        var searchTerm = $("#searchBox").val();
+        var searchTerm = $("#searchBox").val();
+        var didDogDieMovie = await fetchMovie(searchTerm);
+        var movie = await getMovie(searchTerm);
+        var dog = await fetchDog(didDogDieMovie.items[0].id);
+
+        loadMovieDetails(movie, dog);
+
+        storeMovie(searchTerm);
+
+        $("#searchResults").removeClass("hidden");
+    }
+});
