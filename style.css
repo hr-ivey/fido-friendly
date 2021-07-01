@@ -155,7 +155,7 @@ body {
 
 
 /* Mobile responsive layout changes. */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 800px) {
   ul {
     padding-left: 0;
     padding-bottom: 1em;
