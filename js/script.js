@@ -58,6 +58,21 @@ $("#searchBtn").on("click", async function (e) {
     $("#searchResults").removeClass("hidden");
 });
 
+$(document).on("click", "#dropdown li", async function (e) {
+
+    var searchTerm = e.target.innerText;
+
+    var didDogDieMovie = await fetchMovie(searchTerm);
+    var movie = await getMovie(searchTerm);
+    var dog = await fetchDog(didDogDieMovie.items[0].id);
+
+    loadMovieDetails(movie, dog);
+
+    //storeMovie(searchTerm);
+
+    $("#searchResults").removeClass("hidden");
+});
+
 function storeMovie(movie) {
     if (!movieArray.includes(movie)) {
         movieArray.push(movie);
