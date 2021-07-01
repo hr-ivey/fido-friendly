@@ -216,11 +216,12 @@ html {
 
 /* Mobile responsive layout changes. */
 @media only screen and (max-width: 1000px) {
-.navbar {
-  height: auto;
-}
-#logo {
-  width: 100%;
+  .navbar {
+    height: auto;
+  }
+  #logo {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -247,27 +248,29 @@ html {
     height: 300px;
     margin-top: 250px;
   }
-.navbar {
-  height: auto;
+  .navbar {
+    height: auto;
+  }
+  .input-search {
+    width: 700px;
+  }
+  .btn-search:focus ~ .input-search {
+    transition: none;
+    width: 100%;
+    background: #343a40;
+  }
+  .carousel-inner > .carousel-item > img {
+    height: 300px;
+    margin-top: 250px;
+  }
 }
-.input-search {
-  width: 700px;
-}
-.btn-search:focus ~ .input-search {
-  transition: none;
-  width: 100%;
-  background: #343a40;
-}
-.carousel-inner > .carousel-item > img {
-  height: 300px;
-  margin-top: 250px;
-}
+
 @media only screen and (max-width: 500px) {
   .input-search {
     width: 300px;
   }
   .carousel-inner > .carousel-item > img {
     height: 200px;
-    margin-top: 250px;
+    margin-top: 240px;
   }
 }
