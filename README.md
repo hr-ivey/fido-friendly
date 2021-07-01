@@ -11,6 +11,6 @@ An easily accessible search bar to enter the name of a movie. The information fo
 
 The site is deployed at https://hr-ivey.github.io/fido-friendly/
 
-![page preview]("screenshot to go here)
+![page preview](https://github.com/hr-ivey/fido-friendly/blob/23a88906dff6b4e4e73bbd2fb601236fb4c1d2ec/img/127.0.0.1_5500_index.html%20(2).png?raw=true)
 
 Vectors art from <a href="https://www.freevector.com/cute-dogs-and-cats-29802#">FreeVector.com</a>.
