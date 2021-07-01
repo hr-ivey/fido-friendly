@@ -40,7 +40,7 @@ body {
   border: 0.5em;
   border-style: solid;
   border-color: #212529;
-  -webkit-box-shadow: 10px 10px 0px 4px #e91941; 
+  -webkit-box-shadow: 10px 10px 0px 4px #e91941;
   box-shadow: 10px 10px 0px 4px #e91941;
   margin: 0em 0em 1em 1em;
 }
@@ -73,7 +73,7 @@ body {
   width: fit-content;
   height: fit-content;
   position: relative;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 .input-search {
   height: 50px;
@@ -148,11 +148,15 @@ body {
   height: 500px;
 }
 
-.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl
-{
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
   justify-content: space-around;
 }
-
 
 /* Mobile responsive layout changes. */
 @media only screen and (max-width: 800px) {
@@ -161,6 +165,7 @@ body {
     padding-bottom: 1em;
     margin: auto;
   }
+}
 #logo {
   width: 100%;
 }
@@ -186,3 +191,5 @@ body {
   .carousel-inner > .carousel-item > img {
     height: 200px;
     margin-top: 250px;
+  }
+}
